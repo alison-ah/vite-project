@@ -2,26 +2,29 @@ import React from "react";
 import Button from "./Button";
 
 const Quote = () => {
-    const [Quote, setQuote] = React.useState("");
+    const [quote, setQuote] = React.useState("");
+    const [author, setAuthor] = React.useState("");
 
     const fetchApi = () => {
-    
-        fetch("https://type.fit/api/quotes")
-            .then(function(response) {
-                return response.json();
+        fetch("http://api.quotable.io/random")
+            .then((response) => response.json())
+            .then((data) => {
+                setQuote(data.content);
+                setAuthor(data.author);
             })
-            .then(function(data) {
-                console.log(data);
+            .catch((error) => {
+                console.error("Error fetching quote:", error);
             });
     };
 
     return (
         <div>
             <Button callApi={fetchApi} />
-            <p>{Quote}</p>
+
+            <div id="insertQuoteHere">{quote ? `"${quote}"` : "Load quote..."}</div>
+            <div id="insertQuoteAuthor">{author ? `- ${author}` : ""}</div>
         </div>
     );
-
-}
+};
 
 export default Quote;
