@@ -1,8 +1,18 @@
-# React + Vite
+<h1>Quote generator using React and quote API</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2>Overview</h2>
+<p>This project was created to meet the Chingu Solo Project Tier 1 Developer requirements.</p>
 
-Currently, two official plugins are available:
+<h2>Features</h2>
+<p>This is a very basic project. Click the button and, through an API and code to select a random quote, a motivational quote and its author will be displayed.</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>Running the project</h2>
+<p>To run the project, run command "npm run".</p>
+
+<h2>Dependencies</h2>
+<p>
+    <ul>
+        <li>"react": "^18.3.1"</li>
+        <li>"react-dom": "^18.3.1"</li>
+    </ul>
+</p>
